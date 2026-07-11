@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JryRui的个人小站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <img src="image/author.jpg" alt="JryRui" class="avatar">
+        <h1 class="nickname">JryRui</h1>
+    </header>
+
+    <!-- 每日习语 -->
+    <section class="xiyu-section">
+        <div class="xiyu-card" id="xiyuCard">
+            <div class="xiyu-loading" id="xiyuLoading">正在获取今日习语...</div>
+            <div class="xiyu-error" id="xiyuError" style="display:none;"></div>
+            <div class="xiyu-content" id="xiyuContent" style="display:none;">
+                <h2 class="xiyu-title" id="xiyuTitle"></h2>
+                <div class="xiyu-body" id="xiyuBody"></div>
+                <div class="xiyu-meta">
+                    <span class="xiyu-source">来源：人民周刊</span>
+                    <span class="xiyu-time" id="xiyuTime"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section class="projects-section">
+        <div class="projects-grid" id="projectsGrid">
+            <!-- JS动态生成 -->
+        </div>
+    </section>
+
+    <!-- 社交媒体 -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://racoldcn.github.io/CV" target="_blank" rel="noopener" class="social-link">CV</a>
+            <span class="social-divider">/</span>
+            <a href="https://www.xiaohongshu.com/user/profile/66d00dde000000001d023bbc" target="_blank" rel="noopener" class="social-link">小红书</a>
+            <span class="social-divider">/</span>
+            <a href="https://github.com/RacoldCN" target="_blank" rel="noopener" class="social-link">GitHub</a>
+            <span class="social-divider">/</span>
+            <a href="https://space.bilibili.com/593483282" target="_blank" rel="noopener" class="social-link">Bilibili</a>
+            <span class="social-divider">/</span>
+            <a href="mailto:history_traveler@outlook.com" class="social-link">邮箱</a>
+        </div>
+        <p class="copyright">© 2026 JryRui</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

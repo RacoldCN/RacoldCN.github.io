@@ -1,0 +1,32 @@
+name: 每日习语抓取
+
+on:
+  schedule:
+    # 每天 UTC 0:00 和 8:00 各跑一次（对应北京时间 8:00 和 16:00）
+    - cron: '0 0,8 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests beautifulsoup4
+
+      - name: 抓取习语
+        run: python fetch_xiyu.py
+
+      - name: 提交更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add xiyu.json
+          git diff --staged --quiet || (git commit -m "📰 更新每日习语 [skip ci]" && git push)
