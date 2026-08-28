@@ -29,6 +29,20 @@ const projects = [
         desc: '基于校园事件的股票模拟后端',
         web: null,
         repo: 'https://github.com/RacoldCN/stock'
+    },
+    {
+        name: '足迹地图',
+        desc: '在 2D 平面地图上记录旅行足迹的 Windows 桌面应用，支持照片 EXIF GPS 自动定位、省市统计与照片墙展示',
+        web: null,
+        repo: 'https://github.com/RacoldCN/footprint-map',
+        release: 'https://github.com/RacoldCN/footprint-map/releases/latest/download/FootprintEarth-Setup-0.1.0.exe'
+    },
+    {
+        name: 'MetadataViewerCopier',
+        desc: '基于 ExifTool 的 Windows 小工具，图形化查看与复制视频、图片、音频文件的元数据，支持拖拽与命令行模式',
+        web: null,
+        repo: 'https://github.com/RacoldCN/MetadataViewerCopier',
+        release: 'https://github.com/RacoldCN/MetadataViewerCopier/releases/latest/download/MetadataViewerCopier.exe'
     }
 ];
 
@@ -46,6 +60,12 @@ function renderProjects() {
                     <a href="${escapeHtml(p.web)}" target="_blank" rel="noopener" class="btn btn-web">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         网页
+                    </a>
+                ` : ''}
+                ${p.release ? `
+                    <a href="${escapeHtml(p.release)}" target="_blank" rel="noopener" class="btn btn-download">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        下载
                     </a>
                 ` : ''}
                 ${p.repo ? `

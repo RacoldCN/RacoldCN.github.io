@@ -221,6 +221,18 @@ body::before {
     color: #fff;
 }
 
+.btn-download {
+    background: #27ae60;
+    color: #fff;
+    border-color: #27ae60;
+}
+
+.btn-download:hover {
+    background: #229954;
+    border-color: #229954;
+    color: #fff;
+}
+
 .btn-gh {
     /* 默认样式即可 */
 }
